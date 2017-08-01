@@ -1,0 +1,7 @@
+<% if @img_srcs %>
+	$('#content_div').html('<%= j(render('welcome/site_data').html_safe) %>');
+<% else %>
+	alert("Please enter correct URL.");
+	location.reload();
+<% end %>
+

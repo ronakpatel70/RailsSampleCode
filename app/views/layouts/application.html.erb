@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Crowing</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" data-gr-c-s-loaded="true" cz-shortcut-listen="true">
+	  <%= render 'welcome/header' %>
+    <%= yield %>
+    <%= render 'welcome/footer' %>
+  </body>
+</html>

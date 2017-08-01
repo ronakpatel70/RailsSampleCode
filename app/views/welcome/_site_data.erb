@@ -1,0 +1,61 @@
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-4">
+      <h2>Site Detail</h2><br>
+    </div>
+    <div class="col-sm-6">
+      <div class="thumbnail" id="site_image_div">
+        <iframe src=<%= params["url"]%> width="400" height="400"  scrolling="no" style='pointer-events: none; overflow: hidden;'>
+          <p>Your browser does not support iframes.</p>
+        </iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-4">
+      <h2>Javascripts</h2><br>
+    </div>
+    <div class="col-sm-6">
+      <% @js_scripts.each do |data| %>
+        <p><strong><%= data %></strong></p>
+      <%end%>  
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-4">
+      <h2>CSS</h2><br>
+    </div>
+    <div class="col-sm-6">
+      <% @style_css.each do |data| %>
+        <p><strong><%= data %></strong></p>
+      <%end%>  
+    </div>
+  </div>
+</div>
+
+<div id="Site_image" class="container-fluid text-center bg-grey">
+  <h2>Images</h2><br>
+  <div class="row text-center slideanim slide">
+    <% @img_srcs.each do |data| %>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src=<%= data[1]%> alt="Paris" width="400" height="300">
+          <p><strong><%= data[0]%></strong></p>
+        </div>
+      </div>
+    <%end%>  
+  </div><br>
+</div>
+
