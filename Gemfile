@@ -55,16 +55,10 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'therubyracer'
-
-# gem 'wombat'
-
 gem 'nokogiri'
-
-# gem 'selenium-webdriver'
-# gem 'screencap'
-
-# gem 'poltergeist'
-# gem 'phantomjs', :require => 'phantomjs/poltergeist'  
-
 gem 'phantomjs', :require => 'phantomjs/poltergeist'
 gem "webshot"
+
+group :production do
+  gem 'rails_12factor'
+end
